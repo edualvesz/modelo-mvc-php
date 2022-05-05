@@ -4,7 +4,7 @@ namespace App\Controller\Pages;
 use \App\Utils\View;
 use \App\Model\Entity\OrganizationModel;
 
-class Home extends Page{
+class HomeController extends PageController{
     // this method returns the view of home page
     // @return string;
 

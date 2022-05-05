@@ -3,7 +3,7 @@
 namespace App\Controller\Pages;
 use \App\Utils\View;
 
-class Page {
+class PageController {
     //this method is responsible for rendering the top of the page
     //@return string
     private static function getHeader(){
