@@ -12,5 +12,7 @@ class Request
     //@var string
     private $uri;
 
-
+    //private description
+    //@var [type]
+    private $queryParams = [];
 }
