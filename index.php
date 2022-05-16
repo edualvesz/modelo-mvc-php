@@ -2,13 +2,17 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-//use \App\Controller\Pages\Home;
+use App\Http\Router;
+use App\Http\Response;
 use App\Controller\Pages\HomeController;
 
-$obResponse = new \App\Http\Response(200, 'Ola mundo');
+define('URL','http://localhost/modelo-mvc-php');
 
-$obResponse->sendResponse();
+$obRouter = new Router(URL);
 
-exit;
-
-echo HomeController::getHome();
+//HOME ROUTE
+$obRouter->get('/',[
+    function(){
+        return new Response(200,HomeController::getHome());
+    }
+]);
